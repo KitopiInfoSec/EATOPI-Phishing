@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eatopi Phishing Breakdown — Embed · Kitopi InfoSec</title>
+<style>
+:root{
+  --bg:#080f0e; --bg2:#0b1614; --teal:#2fd4c0; --purple:#C49DEC; --green:#92E080;
+  --ink:#cfe9e4; --ink-dim:#6f8b86;
+  --line:rgba(47,212,192,.16); --mono:ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  min-height:100dvh; font-family:system-ui,-apple-system,Segoe UI,sans-serif; color:var(--ink);
+  background:
+    radial-gradient(120% 80% at 82% 6%, rgba(47,212,192,.08) 0%, transparent 46%),
+    radial-gradient(120% 90% at 12% 100%, rgba(196,157,236,.07) 0%, transparent 52%),
+    linear-gradient(150deg,var(--bg) 0%,var(--bg2) 60%,#06100f 100%);
+  display:flex; flex-direction:column; align-items:center; gap:18px;
+  padding:clamp(14px,4vw,40px) clamp(12px,3vw,28px) 48px;
+}
+.demo-head{width:100%; max-width:800px; text-align:center}
+.demo-kicker{
+  font-family:var(--mono); font-size:11px; letter-spacing:2.6px; text-transform:uppercase;
+  color:var(--teal); display:inline-flex; align-items:center; gap:9px; margin-bottom:10px;
+}
+.demo-kicker::before,.demo-kicker::after{content:""; width:22px; height:1px; background:var(--teal); opacity:.55}
+.demo-head h1{font-size:clamp(20px,4.4vw,27px); font-weight:700; letter-spacing:-.01em; color:#fff; line-height:1.15}
+.demo-head h1 .p{color:var(--purple)}
+.demo-head p{margin-top:8px; font-size:14.5px; line-height:1.55; color:var(--ink-dim); max-width:60ch; margin-inline:auto}
+.demo-head code{font-family:var(--mono); font-size:.86em; color:var(--teal); background:rgba(47,212,192,.08); padding:1px 6px; border-radius:5px}
+
+.kitopi-embed{
+  position:relative; width:100%; max-width:800px; margin:0 auto;
+  border-radius:18px; overflow:hidden;
+  box-shadow:0 30px 80px -30px rgba(0,0,0,.9), 0 0 0 1px var(--line);
+  background:#060d0c;
+}
+.kitopi-embed::before{content:""; display:block; padding-top:100%}
+.kitopi-embed iframe{position:absolute; inset:0; width:100%; height:100%; border:0; display:block}
+
+.demo-foot{
+  width:100%; max-width:800px; text-align:center; font-size:12.5px; line-height:1.6;
+  color:var(--ink-dim); font-family:var(--mono); letter-spacing:.2px;
+}
+.demo-foot b{color:var(--ink)}
+</style>
+</head>
+<body>
+
+  <div class="demo-head">
+    <span class="demo-kicker">Kitopi InfoSec</span>
+    <h1>Eatopi Phishing — <span class="p">Breakdown</span></h1>
+    <p>This frame is locked to a perfect square. It sits at <code>800&times;800</code> wherever there's room and shrinks to fit phones and tablets without breaking. Resize your window to watch it reflow.</p>
+  </div>
+
+  <div class="kitopi-embed">
+    <iframe src="kitopi_threat_forensics.html" title="Eatopi phishing breakdown training" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <div class="demo-foot">
+    <b>Deploy note:</b> host <b>kitopi_threat_forensics.html</b>, this page, and the <b>/audio</b> folder in the same directory — or change the iframe <b>src</b> to the file's hosted URL.
+  </div>
+
+</body>
+</html>
